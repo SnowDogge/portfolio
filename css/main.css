@@ -87,7 +87,8 @@
 }
 
 .visual {
-  min-height: 950px;
+  min-height: 850px;
+  height: 100vh;
   position: relative;
 }
 .visual .inner {
