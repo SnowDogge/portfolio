@@ -135,7 +135,7 @@ $font2 : 700;
             color: rgba($black5, 0.03);
             font-weight: 700;
             animation-name: animate;
-            animation-duration: 40s;
+            animation-duration: 30s;
             animation-iteration-count: infinite;
             animation-timing-function: linear;
         }
@@ -211,6 +211,26 @@ $font2 : 700;
                     font-size: 20px;
                 }
             }
+        }
+    }
+    .scroll {
+        opacity: 0;
+        animation: scrolling infinite forwards 4s 2s;
+        position: absolute;
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        bottom: 70px;
+        left: calc(50% - 25px);
+        border: 2px solid $black3;
+        width: 25px;
+        height: 40px;
+        .scroll2 {
+            margin-top: 10px;
+            border-radius: 10px;
+            border: 2px solid $black3;
+            width: 5px;
+            height: 8px;
         }
     }
 }
@@ -559,4 +579,11 @@ $font2 : 700;
 @keyframes faderight {
     0% { opacity: 0; transform: translateX(100vh); }
     100% { opacity: 1; transform: translateX(0); }
+}
+@keyframes scrolling {
+    0% { opacity: 0; transform: translateY(0); }
+    20% { opacity: 1; transform: translateY(0); }
+    60% { opacity: 1; transform: translateY(40px); }
+    80% { opacity: 0; transform: translateY(40px); }
+    100% { opacity: 0; transform: translateY(40px); }
 }
