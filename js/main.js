@@ -3,7 +3,6 @@ $(document).ready(function(){
 
     function device_chk(){
         window_w = $(window).scrollTop();
-        console.log(window_w);
     }
     
     device_chk();
@@ -47,4 +46,5 @@ $(document).ready(function(){
             scrollTop: 1770
         }, 500)
     })
+    console.log("%c Hello, World ! ", "background-color:#212121; color: #fff; font-weight:bold; font-size:120%; padding: 4px;")
 })
