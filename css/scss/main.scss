@@ -133,7 +133,7 @@ $font2 : 800;
             color: rgba($black5, 0.03);
             font-weight: 700;
             animation-name: animate;
-            animation-duration: 30s;
+            animation-duration: 40s;
             animation-iteration-count: infinite;
             animation-timing-function: linear;
         }
@@ -455,8 +455,9 @@ $font2 : 800;
 .footer {
     width: 100%;
     min-height: 200px;
-    background-color: #fff;
+    background-color: $black4;
     .f_inner {
+        display: block;
         padding-top: 120px;
         width: 100%;
         text-align: center;
