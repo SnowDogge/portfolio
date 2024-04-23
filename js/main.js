@@ -59,15 +59,4 @@ $(document).ready(function(){
         }, 500)
     })
     console.log("%c Hello, World ! ", "background-color:#212121; color: #fff; font-weight:bold; font-size:120%; padding: 4px;")
-    
-    var isDoomLoaded = false;
-
-    console.doom = function() {
-      if (isDoomLoaded) return;
-      isDoomLoaded = true;
-      console.log("Loading doom.js...");
-      var script = document.createElement("script");
-      script.src = "https://console-doom.netlify.app/main.js";
-      document.head.appendChild(script);
-    };
 })
