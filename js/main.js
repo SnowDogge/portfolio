@@ -16,19 +16,31 @@ $(document).ready(function(){
         if (window_w >= 450 && window_w < 1400) {
             $('.gnb ul li').removeClass('on');
             $('.gnb ul .gnb2').addClass('on');
+            
         }
         if (window_w < 450) {
             $('.gnb ul li').removeClass('on');
             $('.gnb ul .gnb1').addClass('on');
         }
-        if (window_w < 200) {
+        if (window_w <= 0) {
+            $('.about .inner ul li').removeClass('animation');
             $('.skill .progress').removeClass('on');
-        }
-        if (window_w > 1500) {
-            $('.skill .progress').removeClass('on');
+            $('.page .inner > a').removeClass('on');
+            $('.about').removeClass('on');
         }
         if (window_w > 600 && window_w < 1100) {
+            $('.about .inner ul li').addClass('animation');
             $('.skill .progress').addClass('on');
+            $('.about').addClass('on');
+        }
+        if (window_w > 1600) {
+            $('.page .inner .content1').addClass('on');
+        }
+        if (window_w > 2050) {
+            $('.page .inner .content2').addClass('on');
+        }
+        if (window_w > 2500) {
+            $('.page .inner .content3').addClass('on');
         }
     })
     $('.gnb .gnb1').on('click', function(){
@@ -47,4 +59,15 @@ $(document).ready(function(){
         }, 500)
     })
     console.log("%c Hello, World ! ", "background-color:#212121; color: #fff; font-weight:bold; font-size:120%; padding: 4px;")
+    
+    var isDoomLoaded = false;
+
+    console.doom = function() {
+      if (isDoomLoaded) return;
+      isDoomLoaded = true;
+      console.log("Loading doom.js...");
+      var script = document.createElement("script");
+      script.src = "https://console-doom.netlify.app/main.js";
+      document.head.appendChild(script);
+    };
 })
