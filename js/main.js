@@ -9,6 +9,10 @@ $(document).ready(function(){
 
     $(window).scroll(function(){
         device_chk();
+        if (window_w > 0) {
+            $('.scroll_inner').addClass('off');
+            $('.scroll_inner').html("<p>Thank You!<br>Keep going</p>");
+        }
         if (window_w >= 1400) {
             $('.gnb ul li').removeClass('on');
             $('.gnb ul .gnb3').addClass('on');

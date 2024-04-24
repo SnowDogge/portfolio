@@ -196,15 +196,19 @@
   font-size: 20px;
 }
 .visual .scroll_inner {
+  opacity: 0;
+  animation: scrollingtxt forwards 1s 2s;
   position: absolute;
   justify-content: center;
+  text-align: center;
   bottom: 70px;
-  left: calc(50% - 65px);
+  left: calc(50% - 35px);
+  font-size: 13px;
 }
 .visual .scroll_inner .scroll {
   opacity: 0;
-  animation: scrolling infinite linear 4s 2s;
-  margin: 10px 0 0 45px;
+  animation: scrolling infinite 4s 2s;
+  margin: 10px 0 0 24px;
   display: flex;
   justify-content: center;
   border-radius: 20px;
@@ -219,6 +223,9 @@
   border: 2px solid #9d9d9d;
   width: 5px;
   height: 8px;
+}
+.visual .scroll_inner.off {
+  animation: scrollingstart forwards 1s;
 }
 
 .about {
@@ -624,5 +631,29 @@
   100% {
     opacity: 0;
     transform: translateY(25px);
+  }
+}
+@keyframes scrollingtxt {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes scrollingstart {
+  0% {
+    opacity: inherit;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-2px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(10px);
   }
 }/*# sourceMappingURL=main.css.map */

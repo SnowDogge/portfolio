@@ -19,7 +19,7 @@
     @include absolute_set();
     bottom: 0;
     left: 0;
-}
+}   
 
 $black1 : #1d1d1d;
 $black2 : #3d3d3d;
@@ -214,14 +214,18 @@ $font2 : 700;
         }
     }
     .scroll_inner {
+        opacity: 0;
+        animation: scrollingtxt forwards 1s 2s;
         position: absolute;
         justify-content: center;
+        text-align: center;
         bottom: 70px;
-        left: calc(50% - 65px);
+        left: calc(50% - 35px);
+        font-size: 13px;
         .scroll {
             opacity: 0;
-            animation: scrolling infinite linear 4s 2s;
-            margin: 10px 0 0 45px;
+            animation: scrolling infinite 4s 2s;
+            margin: 10px 0 0 24px;
             display: flex;
             justify-content: center;
             border-radius: 20px;
@@ -237,7 +241,9 @@ $font2 : 700;
                 height: 8px;
             }
         }
-        
+        &.off {
+            animation: scrollingstart forwards 1s;
+        }
     }
 }
 .about {
@@ -592,4 +598,13 @@ $font2 : 700;
     50% { opacity: 1; transform: translateY(25px); }
     70% { opacity: 0; transform: translateY(25px); }
     100% { opacity: 0; transform: translateY(25px); }
+}
+@keyframes scrollingtxt {
+    0% { opacity: 0; transform: translateY(10px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes scrollingstart {
+    0% { opacity: inherit; transform: translateY(0); }
+    50% { opacity: 1; transform: translateY(-2px); }
+    100% { opacity: 0; transform: translateY(10px); }
 }
