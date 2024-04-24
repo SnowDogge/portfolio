@@ -440,6 +440,10 @@ $font2 : 700;
                 &:hover {
                     background-color: $black4;
                 }
+                .depth_inner {
+                    display: flex;
+                    justify-content: space-between;
+                }
                 .img1, .img2, .img3 {
                     margin-top: 20px;
                     margin-bottom: 20px;

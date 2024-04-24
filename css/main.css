@@ -427,6 +427,10 @@
 .page .inner .content1 .depth1:hover, .page .inner .content2 .depth1:hover, .page .inner .content3 .depth1:hover {
   background-color: #F8F8F8;
 }
+.page .inner .content1 .depth1 .depth_inner, .page .inner .content2 .depth1 .depth_inner, .page .inner .content3 .depth1 .depth_inner {
+  display: flex;
+  justify-content: space-between;
+}
 .page .inner .content1 .depth1 .img1, .page .inner .content1 .depth1 .img2, .page .inner .content1 .depth1 .img3, .page .inner .content2 .depth1 .img1, .page .inner .content2 .depth1 .img2, .page .inner .content2 .depth1 .img3, .page .inner .content3 .depth1 .img1, .page .inner .content3 .depth1 .img2, .page .inner .content3 .depth1 .img3 {
   margin-top: 20px;
   margin-bottom: 20px;
